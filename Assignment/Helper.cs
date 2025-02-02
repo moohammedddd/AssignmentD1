@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment
 {
-    internal class Helper<T> where T : IComparable<T>
+    internal class Helper<T> where T : IComparable<T> , INumber<T>
     {
         #region methoodQ1
         public static void Swap(ref T x, ref T y)
@@ -46,6 +47,23 @@ namespace Assignment
         }
         #endregion
 
-    }
+        #region methodQ2
+        public static bool InRange(T min, T max, T value)
+        {
+            if (value.CompareTo(min) >= 0 && value.CompareTo(max) <= 0)
+            {
+                return true;
+            }
+            return false;
+           
+        }
 
+        public static T GetLength (T min, T max)
+            {
+            return max - min;
+
+           }
+        #endregion    
+
+    }
 }
