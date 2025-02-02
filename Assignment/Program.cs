@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Q1
+            int[] arr = { 5, 2, 6, 4, 8, 2, 7, };
+            Helper<int>.BubbleSort(arr);
+            foreach (int item in arr)
+            {
+                Console.WriteLine($"{item}");
+            }
+            #endregion
         }
     }
 }
